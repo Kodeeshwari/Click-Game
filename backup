@@ -1,0 +1,42 @@
+  function pickLI() {
+            //            alert("dsdsd");
+            var list = $("ul li").toArray();
+            //            console.log(list);
+            var elemlength = list.length;
+            randomnum = Math.floor(Math.random() * elemlength);
+            //            console.log(Math.random()* elemlength);
+            var randomitem = list[randomnum];
+            $(randomitem).css("background-color", "mediumpurple");
+            $(randomitem).click(function () {
+                var scoreValue = $("#score").text();
+                var scorenum = parseInt(scoreValue);
+                var setScoreValue = $("#score").text(scorenum + 1);
+                console.log($(this));
+                $(this).css("background-color", "");
+            }).delay(3000).doSomethingElse();
+            //            $(randomitem).click(function () {
+            //                var scoreValue = $("#score").text();
+            //                var scorenum = parseInt(scoreValue);
+            //                var setScoreValue = $("#score").text(scorenum + 1);
+            //                console.log($(this));
+            //                $(this).css("background-color", "");
+            //            });
+            //            var myfunc = setInterval("pickLI()", 3000);
+            //            setInterval(greet, 1000, randomGreeting);
+        }
+
+        function doSomethingElse() {
+            alert("Pchi");
+        }
+        //        function clicked() {
+        //            var scoreValue = $("#score").text();
+        //            var scorenum = parseInt(scoreValue);
+        //            var setScoreValue = $("#score").text(scorenum + 1);
+        //        }
+        //
+        //        function notclicked() {
+        //            var lifeValue = $("#life").text();
+        //            var lifenum = parseInt(lifeValue);
+        //            var setLifeValue = $("#life").text(lifenum - 1);
+        //        }
+        //        $(document).ready(function () {});
